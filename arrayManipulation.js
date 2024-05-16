@@ -9,5 +9,16 @@ function processArray(Tableau) {
   return newTableau;
 }
 
-let numbers = [1, 2, 3, 4, 5];
-console.log(processArray(numbers)); // outputs: [3,4,9,16,15]
+function formatArrayStrings(TableofLetter, Tableofnumber) {
+  if (TableofLetter.length !== Tableofnumber.length) {
+    throw new Error("make sure that the both arrays are same size please!");
+  }
+  return TableofLetter.map((str, index) => {
+    const nombre = Tableofnumber[index];
+    if (nombre % 2 === 0) {
+      return str.toUpperCase();
+    } else {
+      return str.toLowerCase();
+    }
+  });
+}
