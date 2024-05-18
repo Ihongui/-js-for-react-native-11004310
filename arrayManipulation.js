@@ -22,3 +22,4 @@ function formatArrayStrings(TableofLetter, Tableofnumber) {
     }
   });
 }
+module.exports = { processArray, formatArrayStrings };
